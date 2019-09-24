@@ -20,6 +20,6 @@ Now comes the most beautiful part...
 
 *We don't even need to wait for a full forward pass to know the error sign in classification, because we already know it!*   
 
-How? The output layer nonlinearity (usually signoid or softmax) in multi-layer networks bounds the output values between 0 and 1. This, for one-hot encoded labels, ensures that the error sign (output neuron response - binary label) is negative for the target class, and positive for every other class. So not only is DRTP free from weight transport, it is also free from update locking, because we know what the error sign is for each example at every training step!
+How? The output layer nonlinearity (usually signoid or softmax) in multi-layer networks bounds the output values between 0 and 1. This, for one-hot encoded labels, ensures that the error sign (output neuron response - binary label) is negative for the target class, and positive for every other class. So not only is DRTP free from weight transport, it is also free from update locking, because we know what the error sign is for each example at every training step! But what the authors actually do, is take the target labels as a kind of surrogate for the error sign - making DRTP a simplified version of sDFA. It works, because there is a one-to-one mapping from the target vector to the error sign vector - the target vector is basically a shifted and rescaled version of the error sign vector.
 
 
