@@ -14,4 +14,4 @@ b) Independent update of layers possible because a full forward pass is not requ
 Thus DRTP is **purely feedforward** and **low cost**, ideal for use in edge computing devices with memory and power constraints.
 
 **Results**   
-The authors first showed that modulatory signals based on error signs can effectively train multilayer neural networks for regression and classification tasks by using an error-sign-based modification of FDA, referred to as sDFA.
+The authors first showed that modulatory signals based on error signs can effectively train multilayer neural networks for regression and classification tasks by using an error-sign-based modification of FDA, referred to as sDFA. They are able to show that modulatory signals based only on error signs are within 90 degrees of those provided by BP.
