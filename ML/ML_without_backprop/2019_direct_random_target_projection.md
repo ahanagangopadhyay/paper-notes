@@ -1,6 +1,6 @@
 You can find the paper [here](https://arxiv.org/pdf/1909.01311.pdf).
 
-**Summary**   
+- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Summary**   
 This paper shows that only error sign information, and not the explicit errors, is sufficient to maintain feedback alignment and provide learning in the hidden layers. This solves the weight transport problem (symmetry requirement between forward and backward weights), removes update locking and leads to a purely feedforward algorithm that only needs a label-dependent random vector selection for estimating layerwise loss gradients. 
 
 **Related work**   
@@ -24,5 +24,5 @@ How? The output layer nonlinearity (usually signoid or softmax) in multi-layer n
 
 The authors also show that the directions of DRTP and BP modulatory signals are within 90 degrees of each other, so that DRTP is able to align the weights so as to decrease the output error. Results on MNIST and CIFAR-10 datasets show that the mean test error for DRTP is reasonably close to BP, FA and DFA. 
 
-**Discussions**
+**Discussions**  
 The paper proposes a simple approach for training multi-layer networks that removes both weight-transport and update-locking problems of BP-based methods. This solves the key biological implausibility issues, as well as reducing hardware requirements in memory and computation. This approach also has a potential in developing neuromorphic algorithms using the three-factor synaptic plasticity rules, which state that pre- and post-synaptic activities are modulated by a local dendritic voltage that integrates higher-order feedback. For DRTP, these modulatory signals would be based on the targets themselves.
