@@ -11,3 +11,8 @@ This paper came at a time when two important (and very fortunate) things happene
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Dataset**
 
 The ImageNet dataset consists of 15 million labeled high-resolution images from 22,000 categories, collected from the web and labeled manually. The ILSVRC challenge uses a subset of ImageNet with roughly 1000 images from each of 1000 categories, summing up to about 1.2 million training images, 50,000 validation images and 150,000 test images. The images have variable resolution, so they were first downsampled to a fixed resolution of 256x256 and the mean activity over the entire training set was subtracted from each pixel.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) **Proposed Approach**
+
+The CNN used in the paper had 5 convolutional and 3 fully-connected layers. Interestingly, the authors found that removing any convolutional layer (each of which has <1% of the model's parameters) resulted in a deterioration in performance. The characteristic features of the proposed architecture are listed below in the order of importance:
+- ReLU nonlinearity: Training with gradient descent on saturating neurons typically takes much more time than training on non-saturating nonlinearities like ReLU (f(x) = max(0, x)). So ReLU was a natural choice for training such a large network on a large dataset.
