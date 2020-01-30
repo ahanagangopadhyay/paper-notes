@@ -14,3 +14,5 @@ Activation functions that plot expected firing rate as a function of total input
 - Unlike a dense representation where all the neurons will be active most of the time, here we have an additional control to change the number of active neurons to indicate different information contents that different inputs might have.
 - Sparse representations are more likely to be linearly separable because the information is represented in a much higher dimensional space, which means we would need less nonlinear machinery to distinguish different classes. Also raw data is often sparse in nature, and we can exploit this inherent sparsity through this type of representation.
 - The efficiency of sparse representations is much greater than their dense counterparts, with the power of the exponent being the number of non-zero features.
+
+The rectifier activation function rectifier(x) = max(0, x) easily produces a sparse representation, with around 50% of hidden neuron outputs being real zeros upon uniform initialization of weights. Sparsity-inducing regularizations can increase this percentage even further.
